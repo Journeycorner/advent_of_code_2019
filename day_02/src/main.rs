@@ -1,12 +1,12 @@
 use std::fs;
 
 fn main() {
-    let input: Vec<usize> = fs::read_to_string("input.txt").unwrap()
+    let program: Vec<usize> = fs::read_to_string("input.txt").unwrap()
         .split(",")
         .map(|slice| slice.parse::<usize>().unwrap())
         .collect();
-    println!("The result of part one is {}.", part_one(input.clone()));
-    println!("The result of part two is {}.", part_two(input));
+    println!("The result of part one is {}.", part_one(program.clone()));
+    println!("The result of part two is {}.", part_two(program));
 }
 
 fn part_one(input: Vec<usize>) -> usize {
